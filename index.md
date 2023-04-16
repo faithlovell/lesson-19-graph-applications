@@ -3,10 +3,11 @@
 **CISC320 Spring 2023 Lesson 14 - Graph Applications**
 
 Group Members:
-* First member (email)
-* Second member (email)
-* Third member (email)
-* Fourth member (email)
+
+- Aparna Roy (aparnar@udel.edu)
+- Second member (email)
+- Third member (email)
+- Fourth member (email)
 
 Description of project
 
@@ -24,18 +25,19 @@ import networkx as nx
 
 # First Problem Title
 
-**Informal Description**: 
+**Informal Description**:
 
 > **Formal Description**:
->  * Input:
->  * Output:
+>
+> - Input:
+> - Output:
 
 **Graph Problem/Algorithm**: [DFS/BFS/SSSP/APSP/MST]
-
 
 **Setup code**:
 
 ```python
+
 ```
 
 **Visualization**:
@@ -45,12 +47,13 @@ import networkx as nx
 **Solution code:**
 
 ```python
+
 ```
 
 **Output**
 
 ```
+
 ```
 
 **Interpretation of Results**:
-
