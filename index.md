@@ -9,7 +9,7 @@ Group Members:
 - Third member (email)
 - Fourth member (email)
 
-Description of project
+Our project's theme is school.
 
 ## Installation Code
 
@@ -23,7 +23,118 @@ $> pip install networkx
 import networkx as nx
 ```
 
-# First Problem Title
+# First Problem Title (DFS)
+
+**Informal Description**:
+
+> **Formal Description**:
+>
+> - Input:
+> - Output:
+
+**Graph Problem/Algorithm**: [DFS/BFS/SSSP/APSP/MST]
+
+**Setup code**:
+
+```python
+
+```
+
+**Visualization**:
+
+![Image goes here](Relative image filename goes here)
+
+**Solution code:**
+
+```python
+
+```
+
+**Output**
+
+```
+
+```
+
+**Interpretation of Results**:
+
+---
+
+# Second Problem Title (BFS)
+
+**Informal Description**:
+
+> **Formal Description**:
+>
+> - Input:
+> - Output:
+
+**Graph Problem/Algorithm**: [DFS/BFS/SSSP/APSP/MST]
+
+**Setup code**:
+
+```python
+
+```
+
+**Visualization**:
+
+![Image goes here](Relative image filename goes here)
+
+**Solution code:**
+
+```python
+
+```
+
+**Output**
+
+```
+
+```
+
+**Interpretation of Results**:
+
+---
+
+# Third Problem Title (Dijkstra's)
+
+**Informal Description**:
+
+> **Formal Description**:
+>
+> - Input:
+> - Output:
+
+**Graph Problem/Algorithm**: [DFS/BFS/SSSP/APSP/MST]
+
+**Setup code**:
+
+```python
+
+```
+
+**Visualization**:
+
+![Image goes here](Relative image filename goes here)
+
+**Solution code:**
+
+```python
+
+```
+
+**Output**
+
+```
+
+```
+
+**Interpretation of Results**:
+
+---
+
+# Fourth Problem Title (Prim's/Kruskal's)
 
 **Informal Description**:
 
