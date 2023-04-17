@@ -23,7 +23,7 @@ $> pip install networkx
 import networkx as nx
 ```
 
-# First Problem Title (DFS)
+# First Problem Title (for DFS)
 
 **Informal Description**:
 
@@ -60,7 +60,7 @@ import networkx as nx
 
 ---
 
-# Second Problem Title (BFS)
+# Second Problem Title (for BFS)
 
 **Informal Description**:
 
@@ -97,7 +97,7 @@ import networkx as nx
 
 ---
 
-# Third Problem Title (Dijkstra's)
+# Third Problem Title (for Dijkstra's)
 
 **Informal Description**:
 
@@ -134,7 +134,7 @@ import networkx as nx
 
 ---
 
-# Fourth Problem Title (Prim's/Kruskal's)
+# Fourth Problem Title (for Prim's/Kruskal's)
 
 **Informal Description**:
 
