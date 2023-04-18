@@ -21,6 +21,9 @@ $> pip install networkx
 
 ```python
 import networkx as nx
+import matplotlib.pyplot as plt 
+import pprint
+import json
 ```
 
 # First Problem Title (for DFS)
@@ -111,6 +114,34 @@ import networkx as nx
 **Setup code**:
 
 ```python
+#create an empty, undirected graph
+G = nx.Graph()
+
+#add nodes 
+
+G.add_node("One")
+G.add_node("Two")
+
+#add edges
+
+G.add_edge("One")
+G.add_edge("Two")
+
+print("Number of nodes: ", G.number_of_nodes())
+print("Number of edges: ", G.number_of_edges())
+
+print("G.nodes = ", G.nodes)
+print("G.edges = ", G.edges)
+print("G.degree = ", G.degree)
+
+#visualization: 
+plt.figure(1)
+nx.draw_networkx( G,
+                pos=nx.spring_layout(G, iterations=1000),
+                arrows=False, with_labels=True)
+plt.show()
+
+#Source: https://www.youtube.com/watch?v=CPQeSmDGiOQ
 
 ```
 
