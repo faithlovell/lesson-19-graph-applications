@@ -5,7 +5,7 @@
 Group Members:
 
 - Aparna Roy (aparnar@udel.edu)
-- Second member (email)
+- Emma Frampton (eframpt@udel.edu)
 - Third member (email)
 - Fourth member (email)
 
