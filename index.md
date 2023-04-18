@@ -99,7 +99,7 @@ import networkx as nx
 
 # Finding the Shortest Cross Country Trail (for Dijkstra's)
 
-**Informal Description**:
+**Informal Description**: The problem is to find the shortest path for a cross country runner from a designated start point to a given end point. The given park map provides the time taken for each trail (edge). 
 
 > **Formal Description**:
 >
