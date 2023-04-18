@@ -6,7 +6,7 @@ Group Members:
 
 - Aparna Roy (aparnar@udel.edu)
 - Emma Frampton (eframpt@udel.edu)
-- Third member (email)
+- Sakhee Desai (sakheed@udel.edu)
 - Fourth member (email)
 
 Our project's theme is school.
@@ -97,7 +97,7 @@ import networkx as nx
 
 ---
 
-# Third Problem Title (for Dijkstra's)
+# Finding the Shortest Cross Country Trail (for Dijkstra's)
 
 **Informal Description**:
 
