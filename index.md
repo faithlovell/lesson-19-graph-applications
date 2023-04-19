@@ -65,7 +65,7 @@ import networkx as nx
 **Informal Description**:
 Create a map of all the classrooms in a one-story school building, with nodes representing classrooms and edges representing hallways.
 Problem: We need to find a quiet space to work on our group project, but we don't want to walk too far.
-Find all the empty classrooms that are 3 or fewer hallways away from our current location, Classroom A.
+Find all the empty classrooms that are less than 3 hallways away from our current location, Classroom A.
 
 > **Formal Description**:
 >
