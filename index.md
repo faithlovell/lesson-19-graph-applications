@@ -9,7 +9,7 @@ Group Members:
 - Third member (email)
 - Fourth member (email)
 
-Our project's theme is school.
+Our project's theme is school. (elaborate on project description later)
 
 ## Installation Code
 
@@ -63,13 +63,16 @@ import networkx as nx
 # Second Problem Title (for BFS)
 
 **Informal Description**:
+Create a map of all the classrooms in a one-story school building, with nodes representing classrooms and edges representing hallways.
+Problem: We need to find a quiet space to work on our group project, but we don't want to walk too far.
+Find all the empty classrooms that are 3 or fewer hallways away from our current location, Classroom A.
 
 > **Formal Description**:
 >
 > - Input:
 > - Output:
 
-**Graph Problem/Algorithm**: [DFS/BFS/SSSP/APSP/MST]
+**Graph Problem/Algorithm**: BFS
 
 **Setup code**:
 
