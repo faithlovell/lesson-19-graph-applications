@@ -63,12 +63,12 @@ import networkx as nx
 # Nearby Empty Classrooms
 
 **Informal Description**:
-A group of school kids often wants to find an empty classroom to be able to work on their group project together, but they don't want to have to walk too far to find one. So, the problem is to find all the empty classrooms that are less than 3 hallways away so that the students know where they should go.
+A group of school students wants to find an empty classroom to be able to work on their group project together, but they don't want to have to walk too far to find one. So, the problem is to find all the empty classrooms that are less than 3 hallways away so that the students know their options.
 
 > **Formal Description**:
 > Create a map of all the classrooms in a one-story school building, with nodes representing classrooms and edges representing hallways.
-> Problem: We need to find a quiet space to work on our group project, but we don't want to walk too far.
-> Find all the empty classrooms that are less than 3 hallways away from our current location, Classroom A.
+> Problem: A group of students needs to find a quiet space to work on their group project, but they don't want to walk too far.
+> Find all the empty classrooms that are less than 3 hallways away from their current location, Classroom A.
 >
 > - Input: a graph of classrooms in a one-story school building, with nodes representing classrooms and edges representing hallways.
 > - Output: a list of classrooms that are empty and less than 3 hallways away from Classroom A.
@@ -84,7 +84,7 @@ import matplotlib.pyplot as plt
 
 **Visualization**:
 
-![Image goes here](Relative image filename goes here)
+![BFS Graph](./BFS-Graph.png)
 
 **Solution code:**
 
