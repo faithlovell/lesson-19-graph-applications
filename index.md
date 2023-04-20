@@ -60,7 +60,7 @@ import networkx as nx
 
 ---
 
-# Nearby Empty Classrooms
+# Finding Empty Nearby Classrooms
 
 **Informal Description**:
 A group of school students wants to find an empty classroom to be able to work on their group project together, but they don't want to have to walk too far to find one. So, the problem is to find all the empty classrooms that are less than 3 hallways away so that the students know their options.
@@ -70,8 +70,8 @@ A group of school students wants to find an empty classroom to be able to work o
 > Problem: A group of students needs to find a quiet space to work on their group project, but they don't want to walk too far.
 > Find all the empty classrooms that are less than 3 hallways away from their current location, Classroom A.
 >
-> - Input: a graph of classrooms in a one-story school building, with nodes representing classrooms and edges representing hallways.
-> - Output: a list of classrooms that are empty and less than 3 hallways away from Classroom A.
+> - Input: A graph of classrooms in a one-story school building, with nodes representing classrooms and edges representing hallways.
+> - Output: A list of classrooms that are empty and less than 3 hallways away from Classroom A.
 
 **Graph Problem/Algorithm**: BFS
 
@@ -136,7 +136,7 @@ Empty Nearby Classrooms:  ['S', 'G', 'E', 'O']
 ```
 
 **Interpretation of Results**:
-The output of the solution code is a list of classroom nodes. These classrooms are the ones that are both empty and also less than 3 hallways away. The students will now be able to easily decide where they will go from this list of classrooms in order to work on their group project.
+The output of the solution code is a list of classroom nodes. These classrooms are the ones that are both empty and also less than 3 hallways away. The students will now be able to easily decide where they want go from this list of classrooms to work on their group project.
 
 ---
 
