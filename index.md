@@ -1,6 +1,6 @@
-# Title of Your Project
+# School Life
 
-**CISC320 Spring 2023 Lesson 14 - Graph Applications**
+**CISC320 Spring 2023 Lesson 19 - Graph Applications**
 
 Group Members:
 
@@ -21,7 +21,7 @@ $> pip install networkx
 
 ```python
 import networkx as nx
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 import pprint
 import json
 ```
@@ -139,13 +139,13 @@ Empty Nearby Classrooms:  ['S', 'G', 'E', 'O']
 ```
 
 **Interpretation of Results**:
-The output of the solution code is a list of classroom nodes. These classrooms are the ones that are both empty and also less than 3 hallways away. The students will now be able to easily decide where they want go from this list of classrooms to work on their group project.
+The output of the solution code is a list of classroom nodes. These classrooms are the ones that are both empty and also less than 3 hallways away from Classroom A. The students will now be able to easily decide where they want go from this list of classrooms to work on their group project.
 
 ---
 
 # Finding the Shortest Cross Country Trail (for Dijkstra's)
 
-**Informal Description**: The problem is to find the shortest path for a cross country runner from a designated start point to a given end point. The given park map provides the time taken for each trail (edge). 
+**Informal Description**: The problem is to find the shortest path for a cross country runner from a designated start point to a given end point. The given park map provides the time taken for each trail (edge).
 
 > **Formal Description**:
 >
@@ -160,7 +160,7 @@ The output of the solution code is a list of classroom nodes. These classrooms a
 #create an empty, undirected graph
 G = nx.Graph()
 
-#add nodes 
+#add nodes
 
 nodes = ["A","B", "C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T"]
 
@@ -202,7 +202,7 @@ for pair in edges:
 
 
 
-#visualization: 
+#visualization:
 #Source: https://networkx.org/documentation/stable/auto_examples/drawing/plot_weighted_graph.html
 
 pos = nx.spring_layout(G)  # positions for all nodes - seed for reproducibility
