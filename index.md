@@ -233,13 +233,22 @@ plt.show()
 **Solution code:**
 
 ```python
+def solution (G: nx.Graph) -> nx.Graph:
+    solution = nx.shortest_path(G, source="A", target="T", method='dijkstra')
+    length = nx.shortest_path_length(G, source="A", target="T")
+    print("The shortest path from Point A to Point T is: ")
+    print(solution)
+    print(length)
+    return solution
+
+solution(G)
 
 ```
 
 **Output**
 
 ```
-
+['A', 'D', 'O', 'P', 'T']
 ```
 
 **Interpretation of Results**:
