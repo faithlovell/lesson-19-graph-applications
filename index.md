@@ -150,21 +150,17 @@ Classrooms S, G, E, and O, are both empty and also less than 3 hallways away fro
 > - Input: A Graph G where each edge weight represents the time to run that trail. 
 > - Output: The shortest path, with its length, followed by the list of nodes to take. 
 
-**Graph Problem/Algorithm**: [DFS/BFS/SSSP/APSP/MST]
+**Graph Problem/Algorithm**: DFS
 
 **Setup code**:
 
 ```python
 G = nx.Graph()
 
-
 nodes = [["A", 1, 1],["B", 1, 2],["C", 2, 1],["D", 3, 4],["E", 3, 1],["F", 3, 7],["G", 4, 7],["H", 4, 2],["I", 5, 4],["J", 5, 7],["K", 6, 2],["L", 7, 1],["M", 8, 1],["N", 7, 4],["O", 6, 5],["P", 6, 8],["Q", 7, 8],["R", 8, 2],["S", 8, 4],["T", 8, 8]]
-
-
 
 for node in nodes:
     G.add_node(node[0], pos = (node[1], node[2]))
-
 
 edges = [
     ["A", "B", 6],
@@ -198,19 +194,17 @@ for pair in edges:
 
 #Drawing Graph: 
 
-
 # nodes
 nx.draw_networkx_nodes(G, pos = nx.get_node_attributes(G,'pos'), node_size=700)
 
 # edges
 nx.draw_networkx_edges(G, pos = nx.get_node_attributes(G,'pos'), width=6)
-nx.draw_networkx_edges(G, pos = nx.get_node_attributes(G,'pos'), width=6, alpha=0.5, edge_color="b"
-)
+nx.draw_networkx_edges(G, pos = nx.get_node_attributes(G,'pos'), width=6, alpha=0.5, edge_color="b")
 
 # node labels
 nx.draw_networkx_labels(G, pos = nx.get_node_attributes(G,'pos'), font_size=10, font_family="sans-serif")
-#
-#  edge weight labels
+
+# edge weight labels
 edge_labels = nx.get_edge_attributes(G, "weight")
 nx.draw_networkx_edge_labels(G, pos = nx.get_node_attributes(G,'pos'), edge_labels=edge_labels)
 
@@ -248,7 +242,7 @@ The shortest path from Point A to Point T is:
 **Interpretation of Results**:
 
 The output above shows that the shortest way to get from Point A to Point T is to follow the path 
-A -> C -> D -> F -> G -> I -> O -> P -> Q - -> T. And considering the weights represent the amount of time for each path, this total shortest path time would be 52 mins. 
+A -> C -> D -> F -> G -> I -> O -> P -> Q - -> T. And considering the weights represent the amount of time for each path, this would take the cross country runner 52 mins to get to his coach at Point T. 
 
 # Fourth Problem Title (for Prim's/Kruskal's)
 
