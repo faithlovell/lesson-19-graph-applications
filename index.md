@@ -102,12 +102,12 @@ import json
 
 # Finding the Shortest Cross Country Trail (for Dijkstra's)
 
-**Informal Description**: The problem is to find the shortest path for a cross country runner from a designated start point to a given end point. The given park map provides the time taken for each trail (edge). 
+**Informal Description**: A high school cross country team practices for meets at their local park trail. Every runner must start at Point A, and get to the coach who is waiting at Point T, but there are a number of running trails in the park as shown in the graph. One cross country runner wants to find the shortest path from Point A to T. 
 
 > **Formal Description**:
 >
-> - Input:
-> - Output:
+> - Input: A Graph G where each edge weight represents the time to run that trail. 
+> - Output: The shortest path, with its length, followed by the list of nodes to take. 
 
 **Graph Problem/Algorithm**: [DFS/BFS/SSSP/APSP/MST]
 
@@ -179,17 +179,15 @@ plt.show()
 ```
 **Visualization**:
 
-![Image goes here]("dijkstra graph.png")
+![Dijkstra Graph](./dijkstra-graph.png)
 
 **Solution code:**
 
 ```python
 def solution (G: nx.Graph) -> nx.Graph:
-    solution = nx.shortest_path(G, source="A", target="T", method='dijkstra')
-    length = nx.shortest_path_length(G, source="A", target="T")
+    solution = nx.single_source_dijkstra(G, "A", "T")
     print("The shortest path from Point A to Point T is: ")
     print(solution)
-    print(length)
     return solution
 
 solution(G)
@@ -199,12 +197,14 @@ solution(G)
 **Output**
 
 ```
-['A', 'D', 'O', 'P', 'T']
+The shortest path from Point A to Point T is: 
+(52, ['A', 'C', 'D', 'F', 'G', 'I', 'O', 'P', 'Q', 'T'])
 ```
 
 **Interpretation of Results**:
 
----
+The output above shows that the shortest way to get from Point A to Point T is to follow the path 
+A -> C -> D -> F -> G -> I -> O -> P -> Q - -> T. And considering the weights represent the amount of time for each path, this total shortest path time would be 52 mins. 
 
 # Fourth Problem Title (for Prim's/Kruskal's)
 
