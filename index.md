@@ -150,7 +150,7 @@ Classrooms S, G, E, and O, are both empty and also less than 3 hallways away fro
 > - Input: A Graph G where each edge weight represents the time to run that trail. 
 > - Output: The shortest path, with its length, followed by the list of nodes to take. 
 
-**Graph Problem/Algorithm**: DFS
+**Graph Problem/Algorithm**: SSSP
 
 **Setup code**:
 
