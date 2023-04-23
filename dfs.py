@@ -29,13 +29,6 @@ def club_schedule(G: nx.Graph):
 order = club_schedule(G)
 print(order)
 
-#to better visualize the graph & its solution, edges that are part of the final order are colored red
-solution_edges = []
-for i in range(len(order) - 1):
-    solution_edges.append((order[i], order[i+1]))
-
-other_edges = [edge for edge in G.edges() if edge not in solution_edges]
-
 #topological layout (so graph is easier to read) via networkx documentation https://networkx.org/documentation/stable/auto_examples/graph/plot_dag_layout.html
 for layer, nodes in enumerate(nx.topological_generations(G)):
     for node in nodes:
@@ -47,8 +40,7 @@ pos = nx.multipartite_layout(G, subset_key="layer")
 nx.draw_networkx_nodes(G, pos,  node_size = 300, node_color = 'orange')
 #label nodes
 nx.draw_networkx_labels(G, pos)
-#draw edges based on if their are(n't) in solution order
-nx.draw_networkx_edges(G, pos, edgelist = solution_edges, edge_color = 'red', arrows = True)
-nx.draw_networkx_edges(G, pos, edgelist = other_edges, edge_color = 'black', arrows = True)
+#draw edges
+nx.draw_networkx_edges(G, pos, edge_color = 'black', arrows = True)
 #draw graph
 plt.show()
