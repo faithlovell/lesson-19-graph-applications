@@ -7,9 +7,9 @@ Group Members:
 - Aparna Roy (aparnar@udel.edu)
 - Emma Frampton (eframpt@udel.edu)
 - Sakhee Desai (sakheed@udel.edu)
-- Fourth member (email)
+- Faith Lovell (faithlov@udel.edu)
 
-Our project's theme is school. (elaborate on project description later)
+Our project's theme is school. Graph algorithms can be used to solve many problems for students, teachers, clubs, and sports teams within the school.
 
 ## Installation Code
 
@@ -35,7 +35,7 @@ import json
 > - Input:
 > - Output:
 
-**Graph Problem/Algorithm**: [DFS/BFS/SSSP/APSP/MST]
+**Graph Problem/Algorithm**: DFS
 
 **Setup code**:
 
