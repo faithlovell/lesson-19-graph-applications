@@ -57,20 +57,19 @@ solution(G)
 #visualization: 
 #Source: https://networkx.org/documentation/stable/auto_examples/drawing/plot_weighted_graph.html
 
-#pos = nx.spring_layout(G)  # positions for all nodes - seed for reproducibility
 
 # nodes
 nx.draw_networkx_nodes(G, pos = nx.get_node_attributes(G,'pos'), node_size=700)
 
 # edges
 nx.draw_networkx_edges(G, pos = nx.get_node_attributes(G,'pos'), width=6)
-nx.draw_networkx_edges(
-    G, pos = nx.get_node_attributes(G,'pos'), width=6, alpha=0.5, edge_color="b"
+nx.draw_networkx_edges(G, pos = nx.get_node_attributes(G,'pos'), width=6, alpha=0.5, edge_color="b"
 )
 
 # node labels
 nx.draw_networkx_labels(G, pos = nx.get_node_attributes(G,'pos'), font_size=10, font_family="sans-serif")
-# edge weight labels
+#
+#  edge weight labels
 edge_labels = nx.get_edge_attributes(G, "weight")
 nx.draw_networkx_edge_labels(G, pos = nx.get_node_attributes(G,'pos'), edge_labels=edge_labels)
 
