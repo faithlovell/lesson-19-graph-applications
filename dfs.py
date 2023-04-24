@@ -1,8 +1,6 @@
 #DFS application
 import networkx as nx
 import matplotlib.pyplot as plt
-import pprint
-import json
 
 #initialize directed graph G
 G = nx.DiGraph()
@@ -20,14 +18,12 @@ def club_schedule(G: nx.Graph):
     #checks to see if graph is valid for scheduling problem
     if nx.is_directed_acyclic_graph(G):
         #dfs topological sorting using networkx function
-        return list(nx.topological_sort(G))
+        order = list(nx.topological_sort(G))
+        print("Club Painting Order: ", order)
+        return order
     else:
         print("Invalid graph, please make sure your graph is directed acyclic.")
         return None
-
-#answer for sample graph
-order = club_schedule(G)
-print(order)
 
 #topological layout (so graph is easier to read) via networkx documentation https://networkx.org/documentation/stable/auto_examples/graph/plot_dag_layout.html
 for layer, nodes in enumerate(nx.topological_generations(G)):

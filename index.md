@@ -26,40 +26,83 @@ import pprint
 import json
 ```
 
-# First Problem Title (for DFS)
+# Scheduling Clubs to Paint School Mural (for DFS)
 
 **Informal Description**:
+A high school is looking to fill an empty wall in their main lobby with a mural done by all of the schools' clubs before the start of the school year.
+This school will ask one club to do their part each day, but because they are using paint, some clubs have to do their parts before others so the paint is dry when the next club adds details or paints near it. This means the school has to figure out the proper order to schedule each club to contribute to the mural.
 
 > **Formal Description**:
 >
-> - Input:
-> - Output:
+> - Input: A graph with school clubs as nodes, and their respective edges signifying which clubs have to paint before them. Graph should be a Directed Acyclic Graph (DAG) for solution
+> but the function accepts any graph.
+> - Output: If input graph is DAG, solution returns a list of clubs in the order they should paint in. If input is invalid, solution returns None.
 
 **Graph Problem/Algorithm**: DFS
 
 **Setup code**:
 
 ```python
+#initialize directed graph G
+G = nx.DiGraph()
+
+#add all clubs participating into the graph
+#all clubs signified by first letter of their name for readability
+G.add_nodes_from(['A', 'T', 'F', 'E', 'K', 'I', 'L', 'G', 'C', 'P', 'N', 'M', 'D', 'W', 'S', 'O', 'V', 'J', 'H', 'Z'])
+
+#add directed edges between clubs who have to paint their portion before another club
+G.add_edges_from([('A', 'F'), ('A', 'E'), ('A', 'I'), ('A', 'L'), ('F', 'T'), ('F', 'D'), ('E', 'D'), ('E', 'P'), ('I', 'C'), ('I', 'N'), ('L', 'H'), ('T', 'K'), ('P', 'K'), ('H', 'Z')])
+G.add_edges_from([('N', 'Z'), ('J', 'Z'), ('L', 'N'), ('D', 'K'), ('P', 'G'), ('C', 'W'), ('C', 'N'), ('N', 'O'), ('N', 'V'), ('O', 'S'), ('V', 'M'), ('O', 'J'), ('V', 'J'), ('W', 'K')])
+
+
+#topological layout (so graph is easier to read) via networkx documentation https://networkx.org/documentation/stable/auto_examples/graph/plot_dag_layout.html
+for layer, nodes in enumerate(nx.topological_generations(G)):
+    for node in nodes:
+        G.nodes[node]["layer"] = layer
+
+# Compute the multipartite_layout using the "layer" node attribute
+pos = nx.multipartite_layout(G, subset_key="layer")
+#draw nodes
+nx.draw_networkx_nodes(G, pos,  node_size = 300, node_color = 'orange')
+#label nodes
+nx.draw_networkx_labels(G, pos)
+#draw edges
+nx.draw_networkx_edges(G, pos, edge_color = 'black', arrows = True)
+#draw graph
+plt.show()
 
 ```
 
 **Visualization**:
 
-![Image goes here](Relative image filename goes here)
+![DFS Graph](./dfs-graph.png)
 
 **Solution code:**
 
 ```python
-
+#function that returns the order clubs should be scheduled, by inputting a graph G
+def club_schedule(G: nx.Graph):
+    #checks to see if graph is valid for scheduling problem
+    if nx.is_directed_acyclic_graph(G):
+        #dfs topological sorting using networkx function
+        order = list(nx.topological_sort(G))
+        print("Club Painting Order: ", order)
+        return order
+    else:
+        print("Invalid graph, please make sure your graph is directed acyclic.")
+        return None
 ```
 
 **Output**
 
 ```
-
+Club Painting Order:  ['A', 'F', 'E', 'I', 'L', 'T', 'D', 'P', 'C', 'H', 'G', 'W', 'N', 'K', 'O', 'V', 'S', 'M', 'J', 'Z']
 ```
 
 **Interpretation of Results**:
+The output shows the calculated order of clubs based on their dependency on another clubs' artwork.
+Club A should paint first, followed by F -> E -> I -> L -> T -> D -> P -> C -> H -> G -> W -> N -> K -> O -> V -> S -> M -> J, and ending with Club Z.
+By using this order to schedule the clubs for painting, it will ensure that clubs whose contribution is needed for another club to paint are scheduled prior to their successors.
 
 ---
 
